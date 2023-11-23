@@ -58,6 +58,10 @@ public class BookPage extends BasePage {
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
+    public List<WebElement> returnInfoColumnValues(String bookName){
+        String xpathLocator = "//td[.='"+bookName+"']/../td[6]";
+        return Driver.getDriver().findElements(By.xpath(xpathLocator));
+    }
 
 
 }
